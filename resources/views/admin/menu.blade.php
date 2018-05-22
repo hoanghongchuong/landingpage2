@@ -23,41 +23,53 @@
 
         
         <!-- <li><a href="backend/news?type=tin-tuc"><i class="fa fa-circle-o"></i> <span>Quản lý tin tức</span></a></li> -->
-        
+        <li><a href="backend/about/edit?type=gioi-thieu"><i class="fa fa-circle-o"></i> <span>Bài viết giới thiệu</span></a></li>
        
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Quản giới thiệu</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-              <li><a href="backend/about/edit?type=gioi-thieu"><i class="fa fa-circle-o"></i> <span>Bài viết giới thiệu</span></a></li>
+              
               <li><a href="backend/news?type=tin-tuc"><i class="fa fa-circle-o"></i> <span>Danh sách ảnh</span></a></li>
           </ul>
-        </li>
+        </li> -->
        
         <li><a href="backend/lienket?type=tieu-chi"><i class="fa fa-circle-o"></i> <span>Quy mô</span></a></li>
         <li><a href="backend/lienket?type=dautu"><i class="fa fa-circle-o"></i> <span>Chủ đầu tư</span></a></li>
         <!-- <li><a href="backend/gioithieu"><i class="fa fa-circle-o"></i> <span>Giới thiệu</span></a></li> -->
+        <li><a href="backend/about/edit?type=tien-do"><i class="fa fa-circle-o"></i> <span>Tiến độ thanh toán</span></a></li>
         
-        
-        <li><a href="backend/partner"><i class="fa fa-circle-o"></i> <span>Quản lý đối tác</span></a></li>
-        <li><a href="backend/video"><i class="fa fa-circle-o"></i> <span>Video</span></a></li>
+        <!-- <li><a href="backend/partner"><i class="fa fa-circle-o"></i> <span>Quản lý đối tác</span></a></li> -->
+        <!-- <li><a href="backend/video"><i class="fa fa-circle-o"></i> <span>Video</span></a></li> -->
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Tổ hợp tiện tích</span>
+            <i class="fa fa-edit"></i> <span>Mặt bằng tiện tích</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="backend/about/edit?type=tienich"><i class="fa fa-circle-o"></i> <span>Giới thiệu tiện ích</span></a></li>
-            <li><a href="backend/news?type=tienich"><i class="fa fa-circle-o"></i> <span>Tiện tích</span></a></li>
+            <li><a href="backend/about/edit?type=tienich"><i class="fa fa-circle-o"></i> <span>MẶT BẰNG TIỆN ÍCH <br>THE ARENA CAM RANH</span></a></li>
+            <li><a href="backend/slider?type=thu-vien-anh"><i class="fa fa-circle-o"></i> <span>Hình ảnh</span></a></li>
+            <li><a href="backend/news?type=tienich"><i class="fa fa-circle-o"></i> <span>Tiện tích 5 sao</span></a></li>
           </ul>
         </li>
         
-
         
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Chính sách bán hàng</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="backend/about/edit?type=chinhsach"><i class="fa fa-circle-o"></i> <span>Chính sách</span></a></li>
+            <li><a href="backend/about/edit?type=video"><i class="fa fa-circle-o"></i> <span>Video</span></a></li>
+          </ul>
+        </li>
        
         <li><a href="backend/newsletter?type=newsletter"><i class="fa fa-circle-o"></i> <span>Quản lý đăng ký nhận tin</span></a></li>
+         <li><a href="backend/about/edit?type=condotel"><i class="fa fa-circle-o"></i> <span>CONDOTEL ARENA CAM RANH</span></a></li>
+         <li><a href="backend/about/edit?type=footer"><i class="fa fa-circle-o"></i> <span>Nội dung footer</span></a></li>
         <!-- <li><a href="backend/lienket?type=gioi-thieu"><i class="fa fa-circle-o"></i> <span>Hình ảnh giới thiệu</span></a></li> -->
         <!-- <li><a href="backend/lienket?type=tieu-chi"><i class="fa fa-circle-o"></i> <span>Tiêu chí hội viên</span></a></li> -->
         <!-- <li><a href="backend/slider?type=thu-vien-anh"><i class="fa fa-circle-o"></i> <span>Thư viện ảnh</span></a></li> -->

@@ -58,6 +58,9 @@ class SettingController extends Controller
             $data->hotline = $request->txtHotline;
             $data->fax = $request->txtFax;
             $data->website = $request->txtWebsite;
+            $data->quymo = $request->quymo;
+            $data->giaban = $request->giaban;
+            $data->dientich = $request->dientich;
             $data->email = $request->txtEmail;
             $data->title_index = $request->txtTitle_index;
             $data->copyright = $request->txtCopyright;

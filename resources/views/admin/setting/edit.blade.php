@@ -44,8 +44,20 @@
 								      	<input type="text" name="txtCompany" value="{!! old('txtCompany', isset($data) ? $data->company : null) !!}"  class="form-control" />
 									</div>
 									<div class="form-group">
-								      	<label for="ten">Địa chỉ</label>
+								      	<label for="ten">Địa chỉ (vị trí)</label>
 								      	<input type="text" name="txtAddress" value="{!! old('txtAddress', isset($data) ? $data->address : null) !!}"  class="form-control" />
+									</div>
+									<div class="form-group">
+								      	<label for="ten">Quy mô</label>
+								      	<input type="text" name="quymo" value="{!! old('txtAddress', isset($data) ? $data->quymo : null) !!}"  class="form-control" />
+									</div>
+									<div class="form-group">
+								      	<label for="ten">Giá bán</label>
+								      	<input type="text" name="giaban" value="{!! old('txtAddress', isset($data) ? $data->giaban : null) !!}"  class="form-control" />
+									</div>
+									<div class="form-group">
+								      	<label for="ten">Diện tích</label>
+								      	<input type="text" name="dientich" value="{!! old('txtAddress', isset($data) ? $data->dientich : null) !!}"  class="form-control" />
 									</div>
 									<div class="form-group">
 								      	<label for="ten">Website</label>
@@ -81,7 +93,7 @@
 									</div>
 								</div>
 								<div class="col-md-6 col-xs-12">
-									<div class="form-group">
+									<!-- <div class="form-group">
 								      	<label for="ten">Facebook</label>
 								      	<input type="text" name="txtFacebook" value="{!! old('txtFacebook', isset($data) ? $data->facebook : null) !!}"  class="form-control" />
 									</div>
@@ -92,15 +104,15 @@
 									<div class="form-group">
 								      	<label for="ten">Google</label>
 								      	<input type="text" name="txtGoogle" value="{!! old('txtGoogle', isset($data) ? $data->google : null) !!}"  class="form-control" />
-									</div>
+									</div> -->
 									<!-- <div class="form-group">
 								      	<label for="ten">Skype</label>
 								      	<input type="text" name="txtSkype" value="{!! old('txtSkype', isset($data) ? $data->skype : null) !!}"  class="form-control" />
 									</div> -->
-									<div class="form-group">
+									<!-- <div class="form-group">
 								      	<label for="ten">Youtube</label>
 								      	<input type="text" name="txtYoutube" value="{!! old('txtYoutube', isset($data) ? $data->youtube : null) !!}"  class="form-control" />
-									</div>
+									</div> -->
 									<div class="form-group">
 								      	<label for="desc">Code chat</label>
 								      	<textarea name="txtCodechat" rows="5" class="form-control">{{ old('txtCodechat', isset($data) ? $data->codechat : null) }}</textarea>

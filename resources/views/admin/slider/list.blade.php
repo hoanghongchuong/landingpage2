@@ -48,9 +48,9 @@
               <tr>
                 <th style="width: 20px;"><input type="checkbox" name="chonhet" class="minimal" id="chonhet" /></th>
                 <th class="text-center with_dieuhuong">Stt</th>
-                <th>Tên bài viết</th>
+                <!-- <th>Tên bài viết</th> -->
                 <th>Hình ảnh</th>
-                <th class="text-center with_dieuhuong">Hoạt động</th>
+                <!-- <th class="text-center with_dieuhuong">Hoạt động</th> -->
                 <th class="text-center with_dieuhuong">Sửa</th>
                 <th class="text-center with_dieuhuong">Xóa</th>
               </tr>
@@ -60,10 +60,10 @@
               <tr>
                 <td><input type="checkbox" name="chon" id="chon" value="{{$item->id}}" class="chon" /></td>
                 <td class="text-center with_dieuhuong">{{$k+1}}</td>
-                <td>{{$item->name}}</td>
+                <!-- <td>{{$item->name}}</td> -->
                 
-                <td><img src="{{ asset('upload/hinhanh/'.$item->photo) }}" onerror="this.src='{{ asset('public/admin_assets/images/no-image.jpg') }}';" class="img_product"  alt="NO PHOTO" /></td>
-                <td class="text-center with_dieuhuong">
+                <td class="text-center"><img src="{{ asset('upload/hinhanh/'.$item->photo) }}" onerror="this.src='{{ asset('public/admin_assets/images/no-image.jpg') }}';" class="img_product"  alt="NO PHOTO" /></td>
+                <!-- <td class="text-center with_dieuhuong">
                   <div class="form-group"> 
                     @if($item->status>0)
                       <a href="backend/slider/edit?id={{$item->id}}&hienthi={{ time() }}&type={{ @$_GET['type'] }}" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Hiển thị</a>
@@ -71,14 +71,14 @@
                       <a href="backend/slider/edit?id={{$item->id}}&hienthi={{ time() }}&type={{ @$_GET['type'] }}" class="btn btn-danger btn-xs"><i class="fa fa-eye"></i> Hiển thị</a>
                     @endif
                   </div>
-                  <!-- <div class="form-group"> 
+                  <div class="form-group"> 
                     @if($item->noibat>0)
                       <a href="admin/slider/edit?id={{$item->id}}&noibat={{ time() }}&type={{ @$_GET['type'] }}" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Nổi bật</a>
                     @else
                       <a href="admin/slider/edit?id={{$item->id}}&noibat={{ time() }}&type={{ @$_GET['type'] }}" class="btn btn-danger btn-xs"><i class="fa fa-eye"></i> Nổi bật</a>
                     @endif
-                  </div> -->
-                </td>
+                  </div>
+                </td> -->
                 <td class="text-center with_dieuhuong">
                   <i class="fa fa-pencil fa-fw"></i><a href="backend/slider/edit?id={{$item->id}}&type={{ @$_GET['type'] }}">Edit</a>
                 </td>

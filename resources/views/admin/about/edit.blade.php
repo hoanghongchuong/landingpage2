@@ -27,18 +27,18 @@
 	                <ul class="nav nav-tabs">
 	                  	<li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Thông tin chung</a></li>
 	                  	
-	                  	<li><a href="#tab_2" data-toggle="tab" aria-expanded="true">SEO</a></li>
+	                  	<!-- <li><a href="#tab_2" data-toggle="tab" aria-expanded="true">SEO</a></li> -->
 	                  
 	                </ul>
 	                <div class="tab-content">
 	                  	<div class="tab-pane active" id="tab_1">
 	                  		<div class="row">
 		                  		<div class="col-md-6 col-xs-12">
-									<!-- @if($_GET['type']=='gioi-thieu')
+									@if($_GET['type']=='condotel')
 							    	<div class="form-group">
 								      	<label for="ten">Tên</label>
 								      	<input type="text" name="txtName" id="txtName" value="{{ @$data->name }}"  class="form-control" />
-									</div> -->
+									</div>
 									<!-- <div class="form-group @if ($errors->first('txtAlias')!='') has-error @endif">
 								      	<label for="alias">Đường dẫn tĩnh</label>
 								      	<input type="text" name="txtAlias" id="txtAlias" value="{{ @$data->alias }}"  class="form-control" />
@@ -46,7 +46,7 @@
 								      	<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> {!! $errors->first('txtAlias'); !!}</label>
 								      	@endif
 									</div> -->
-									<!-- @endif -->
+									@endif
 								</div>
 								<input type="hidden" name="txtCom" value="{{ old('txtCom', isset($data) ? @$data->com : null) }}">
 								<div class="clearfix"></div>
@@ -69,14 +69,14 @@
 								<div class="col-md-12 col-xs-12">
 									<div class="box box-info">
 						                <div class="box-header">                                               
-						                  	<h3 class="box-title">Nội dung</h3>
+						                  	<h3 class="box-title">@if($_GET['type']=='video') Mã nhúng @else Nội dung @endif</h3>
 						                  	<div class="pull-right box-tools">
 							                    <button class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 							                    <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
 							                </div>
 						                </div>
 						                <div class="box-body pad">
-						        			<textarea name="txtContent" id="" class="form-control" cols="50" rows="5">{{ @$data->content }}</textarea>
+						        			<textarea name="txtContent" @if($_GET['type']=='chinhsach' || $_GET['type']=='gioi-thieu' || $_GET['type']=='tien-do' || $_GET['type']=='footer' || $_GET['type']=='tienich') id="txtContent" @endif class="form-control" cols="50" rows="5">{{ @$data->content }}</textarea>
 						        		</div>
 						        	</div>
 								</div>
