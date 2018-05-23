@@ -45,10 +45,10 @@ class SliderController extends Controller
     }
     public function postAdd(Request $request)
     {
-        $this->validate($request,
-            ["txtName" => "required"],
-            ["txtName.required" => "Bạn chưa nhập tên slider"]
-        );
+        // $this->validate($request,
+        //     ["txtName" => "required"],
+        //     ["txtName.required" => "Bạn chưa nhập tên slider"]
+        // );
         $com= $request->txtCom;
         $img = $request->file('fImages');
         $path_img='upload/hinhanh';

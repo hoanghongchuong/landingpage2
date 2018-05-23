@@ -50,21 +50,21 @@
 					      	@endif
 						</div> -->
 						<div class="clearfix"></div>
-				    	<div class="form-group @if ($errors->first('txtName')!='') has-error @endif">
+				    	<!-- <div class="form-group @if ($errors->first('txtName')!='') has-error @endif">
 					      	<label for="ten">Tên</label>
 					      	<input type="text" name="txtName" id="txtName" value="{{ $data->name }}"  class="form-control" />
 					      	@if ($errors->first('txtName')!='')
 					      	<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> {!! $errors->first('txtName'); !!}</label>
 					      	@endif
-						</div>
-						<div class="form-group">
+						</div> -->
+						<!-- <div class="form-group">
 					      	<label for="alias">Đường dẫn tĩnh</label>
 					      	<input type="text" name="txtLink" id="txtLink" value="{{ $data->link }}"  class="form-control" />
 						</div>
 						<div class="form-group">
 					      	<label for="desc">Mô tả</label>
 					      	<textarea name="txtDesc" rows="5" id="" class="form-control">{{ $data->mota }}</textarea>
-						</div>
+						</div> -->
 
 					</div>
 					<!-- <div class="col-md-6 col-xs-12">
@@ -86,17 +86,16 @@
 	            <div class="clearfix"></div>
 	            <div class="row">
 				    <div class="col-md-6">
-				    	<div class="form-group">
+				    	<div class="form-group hidden">
 						      <label for="ten">Số thứ tự</label>
 						      <input type="number" min="1" name="stt" value="{!! isset($data->stt) ? $data->stt : (count($news)+1) !!}" class="form-control" style="width: 100px;">
 					    </div>
 					    
-					    <div class="form-group">
+					    <div class="form-group hidden">
 						    <label>
 					        	<input type="checkbox" name="status" {!! (!isset($data->status) || $data->status==1)?'checked="checked"':'' !!}> Hiển thị
 					    	</label>
-					    </div>
-				    	
+					    </div>				    	
 				    </div>
 			    </div>
 			    <div class="clearfix"></div>

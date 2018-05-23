@@ -67,18 +67,18 @@
 								      	<label for="ten">Email</label>
 								      	<input type="text" name="txtEmail" value="{!! old('txtEmail', isset($data) ? $data->email : null) !!}"  class="form-control" />
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 								      	<label for="ten">Điện thoại</label>
 								      	<input type="text" name="txtPhone" value="{!! old('txtPhone', isset($data) ? $data->phone : null) !!}"  class="form-control" />
-									</div>
+									</div> -->
 									<div class="form-group">
 								      	<label for="ten">Hotline</label>
 								      	<input type="text" name="txtHotline" value="{!! old('txtHotline', isset($data) ? $data->hotline : null) !!}"  class="form-control" />
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 								      	<label for="ten">Fax</label>
 								      	<input type="text" name="txtFax" value="{!! old('txtFax', isset($data) ? $data->fax : null) !!}"  class="form-control" />
-									</div>
+									</div> -->
 									<!-- <div class="form-group">
 								      	<label for="ten">Tọa độ</label>
 								      	<input type="text" name="txtToado" value="{!! old('txtToado', isset($data) ? $data->toado : null) !!}"  class="form-control" />

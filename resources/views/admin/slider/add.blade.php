@@ -41,21 +41,21 @@
 				      	@endif
 					</div> -->
 					<div class="clearfix"></div>
-			    	<div class="form-group @if ($errors->first('txtName')!='') has-error @endif">
+			    	<!-- <div class="form-group @if ($errors->first('txtName')!='') has-error @endif">
 				      	<label for="ten">Tên</label>
 				      	<input type="text" id="txtName" name="txtName" value=""  class="form-control" />
 				      	@if ($errors->first('txtName')!='')
 				      	<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> {!! $errors->first('txtName'); !!}</label>
 				      	@endif
-					</div>
-					<div class="form-group">
+					</div> -->
+					<!-- <div class="form-group">
 				      	<label for="alias">Link liên kết</label>
 				      	<input type="text" name="txtLink" id="txtLink" value=""  class="form-control" />
 					</div>
 					<div class="form-group">
 				      	<label for="desc">Mô tả</label>
 				      	<textarea name="txtDesc" rows="5" class="form-control"></textarea>
-					</div>
+					</div> -->
 
 					<input type="hidden" name="txtCom" value="{{ @$_GET['type'] }}"/>
 				</div>
@@ -75,12 +75,12 @@
 				</div> -->
 	            <div class="clearfix"></div>
 			    <div class="col-md-6">
-			    	<div class="form-group">
+			    	<div class="form-group hidden">
 					      <label for="ten">Số thứ tự</label>
 					      <input type="number" min="1" name="stt" value="{!! count($data)+1 !!}" class="form-control" style="width: 100px;">
 				    </div>
 				    
-				    <div class="form-group">
+				    <div class="form-group hidden">
 					    <label>
 				        	<input type="checkbox" name="status" checked="checked"> Hiển thị
 				    	</label>

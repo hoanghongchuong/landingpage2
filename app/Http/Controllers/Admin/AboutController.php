@@ -127,12 +127,24 @@ class AboutController extends Controller
 
         if(!empty($data)){
             
+            $img = $request->file('fImages');
+            $img_current = 'upload/hinhanh/'.$request->img_current;
+            if(!empty($img)){
+                $path_img='upload/hinhanh';
+                $img_name=time().'_'.$img->getClientOriginalName();
+                $img->move($path_img,$img_name);
+                $data->photo = $img_name;
+                if (File::exists($img_current)) {
+                    File::delete($img_current);
+                }
+            }
+
             $data->name = $request->txtName;
             $data->alias = changeTitle($request->txtName);
-            
             $data->mota = $request->txtDesc;
             $data->title = $request->txtTitle;
             $data->content = $request->txtContent;
+            $data->content_more = $request->content_more;
             $data->keyword = $request->txtKeyword;
             $data->description = $request->txtDescription;
             $data->com = $request->txtCom;

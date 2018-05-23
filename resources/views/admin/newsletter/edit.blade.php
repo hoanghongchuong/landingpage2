@@ -37,10 +37,10 @@
 					      	<label for="alias">Số điện thoại</label>
 					      	<input type="text" name="phone" id="txtEmail" value="{{ $data->phone }}" placeholder="Số điện thoại" required="" class="form-control" />
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 					      	<label for="alias">Nội dung</label>
 					      	<textarea name="content" id="" class="form-control" cols="30" rows="10">{{$data->content}}</textarea>
-						</div>
+						</div> -->
 						<!-- <div class="form-group @if ($errors->first('fImages')!='') has-error @endif">
 							<div class="form-group">
 								<img src="{{ asset('upload/hinhanh/'.$data->photo) }}" onerror="this.src='{{asset('public/admin_assets/images/no-image.jpg')}}'" class="img-responsive"  alt="NO PHOTO" />
@@ -79,12 +79,12 @@
 	            <div class="clearfix"></div>
 	            <div class="row">
 				    <div class="col-md-6">
-				    	<div class="form-group">
+				    	<div class="form-group hidden">
 						      <label for="ten">Số thứ tự</label>
 						      <input type="number" min="1" name="stt" value="{!! isset($data->status) ? $data->stt : (count($news)+1) !!}" class="form-control" style="width: 100px;">
 					    </div>
 					    
-					    <div class="form-group">
+					    <div class="form-group hidden">
 						    <label>
 					        	<input type="checkbox" name="status" {!! (!isset($data->status) || $data->status==1)?'checked="checked"':'' !!}> Hiển thị
 					    	</label>

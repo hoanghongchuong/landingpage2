@@ -20,7 +20,7 @@
     <div class="box">
     	@include('admin.messages_error')
         <div class="box-body">
-        	<form method="post" action="backend/about/edit?type={{ @$_GET['type'] }}">
+        	<form method="post" action="backend/about/edit?type={{ @$_GET['type'] }}" enctype="multipart/form-data">
         		<input type="hidden" name="_token" value="{!! csrf_token() !!}" />
         		
       			<div class="nav-tabs-custom">
@@ -34,7 +34,21 @@
 	                  	<div class="tab-pane active" id="tab_1">
 	                  		<div class="row">
 		                  		<div class="col-md-6 col-xs-12">
-									@if($_GET['type']=='condotel')
+									@if($_GET['type']=='vitri')
+		                  			<div class="form-group @if ($errors->first('fImages')!='') has-error @endif">
+										<div class="form-group">
+											<img src="{{ asset('upload/hinhanh/'.$data->photo) }}" onerror="this.src='{{asset('public/admin_assets/images/no-image.jpg')}}'" width="200"  alt="NO PHOTO" />
+											<input type="hidden" name="img_current" value="{!! @$data->photo !!}">
+										</div>
+										<label for="file">Chọn File ảnh</label>
+								     	<input type="file" id="file" name="fImages" >
+								    	<p class="help-block">Width:225px - Height: 162px</p>
+								    	@if ($errors->first('fImages')!='')
+								      	<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> {!! $errors->first('fImages'); !!}</label>
+								      	@endif
+									</div>
+									@endif
+									@if($_GET['type']=='condotel' || $_GET['type']=='thearena' || $_GET['type']=='tienich')
 							    	<div class="form-group">
 								      	<label for="ten">Tên</label>
 								      	<input type="text" name="txtName" id="txtName" value="{{ @$data->name }}"  class="form-control" />
@@ -50,11 +64,11 @@
 								</div>
 								<input type="hidden" name="txtCom" value="{{ old('txtCom', isset($data) ? @$data->com : null) }}">
 								<div class="clearfix"></div>
-								@if($_GET['type']=='choose')
+								@if($_GET['type']=='condotel-camranh')
 								<div class="col-md-12 col-xs-12">
 									<div class="box box-info">
 						                <div class="box-header">                                               
-						                  	<h3 class="box-title">Mô tả</h3>
+						                  	<h3 class="box-title">Nội dung 1</h3>
 						                  	<div class="pull-right box-tools">
 							                    <button class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 							                    <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
@@ -69,17 +83,33 @@
 								<div class="col-md-12 col-xs-12">
 									<div class="box box-info">
 						                <div class="box-header">                                               
-						                  	<h3 class="box-title">@if($_GET['type']=='video') Mã nhúng @else Nội dung @endif</h3>
+						                  	<h3 class="box-title">@if($_GET['type']=='video') Mã nhúng @elseif($_GET['type']=='condotel-camranh') Nội dung 2 @else Nội dung  @endif</h3>
 						                  	<div class="pull-right box-tools">
 							                    <button class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 							                    <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
 							                </div>
 						                </div>
 						                <div class="box-body pad">
-						        			<textarea name="txtContent" @if($_GET['type']=='chinhsach' || $_GET['type']=='gioi-thieu' || $_GET['type']=='tien-do' || $_GET['type']=='footer' || $_GET['type']=='tienich') id="txtContent" @endif class="form-control" cols="50" rows="5">{{ @$data->content }}</textarea>
+						        			<textarea name="txtContent"  id="txtContent" class="form-control" cols="50" rows="5">{{ @$data->content }}</textarea>
 						        		</div>
 						        	</div>
 								</div>
+								@if($_GET['type']=='condotel-camranh')
+								<div class="col-md-12 col-xs-12">
+									<div class="box box-info">
+						                <div class="box-header">                                               
+						                  	<h3 class="box-title">Nội dung 3</h3>
+						                  	<div class="pull-right box-tools">
+							                    <button class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+							                    <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+							                </div>
+						                </div>
+						                <div class="box-body pad">
+						        			<textarea name="content_more" id="txtContent" cols="50" rows="5">{{ @$data->content_more }}</textarea>
+						        		</div>
+						        	</div>
+								</div>
+								@endif
 							</div>
 							<div class="clearfix"></div>
 	                  	</div><!-- /.tab-pane -->

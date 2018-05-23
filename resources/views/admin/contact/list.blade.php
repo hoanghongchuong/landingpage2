@@ -80,15 +80,15 @@
                                             Stt
                                         </th>
                                         <!-- <th>Tên bài viết</th> -->
-                                        <th>Họ tên</th>
+                                        <!-- <th>Họ tên</th> -->
                                         <th>Số điện thoại</th>
                                         <th>Email</th>
-                                        <th>Nội dung</th>
+                                        <!-- <th>Nội dung</th> -->
                                         <!-- <th>Ngày gửi</th> -->
                                         <!-- <th class="text-center with_dieuhuong">Hoạt động</th> -->
-                                        <th class="text-center with_dieuhuong">
+                                        <!-- <th class="text-center with_dieuhuong">
                                             Trạng thái
-                                        </th>
+                                        </th> -->
                                         <th class="text-center with_dieuhuong">
                                             Xóa
                                         </th>
@@ -103,13 +103,13 @@
                                         <td class="text-center with_dieuhuong">
                                             {{$k+1}}
                                         </td>
-                                        <td>{{$item->name}}</td>
+                                        <!-- <td>{{$item->name}}</td> -->
                                         <td>{{$item->phone}}</td>
                                         <td>{{$item->email}}</td>
-                                        <td>{{$item->content}}</td>
+                                        <!-- <td>{{$item->content}}</td> -->
                                         <!-- <td><?=date('d/m/Y', strtotime($item->created_at))?></td> -->
                                         <!-- <td><img src="{{ asset('upload/hinhanh/'.$item->photo) }}" onerror="this.src='{{ asset('public/admin_assets/images/no-image.jpg') }}';" class="img_product"  alt="NO PHOTO" /></td> -->
-                                        <td class="text-center with_dieuhuong">
+                                        <!-- <td class="text-center with_dieuhuong">
                                             <button class="btn-toggle-status btn btn-{{ !$item->status? 'warning btn-access' : 'success' }} btn-sm" contact-id="{{ $item->id }}">
                                                 @if(!$item->status)
                                                 chưa xử lý
@@ -117,7 +117,7 @@
                                                 đã xử lý
                                                 @endif
                                             </button>
-                                        </td>
+                                        </td> -->
                                         <td class="text-center">
                                             <i class="fa fa-trash-o fa-fw">
                                             </i>
